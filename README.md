@@ -1,0 +1,2 @@
+# Applied AI Cybersecurity - RAG Mini Project
+This project implements an offline Retrieval-Augmented Generation (RAG) system for pre-encryption ransomware detection and mitigation telemetry. It uses ChromaDB for cosine vector storage and SentenceTransformers (all-MiniLM-L6-v2) for local dense retrieval, evaluated against an 8-question goldset for evidence retrieval and refusal discipline.
