@@ -1,0 +1,9 @@
+# Canary File Traps and Mini-Filter Driver Interception
+
+Canary or honeypot traps deploy decoy assets into predictable directory paths that are typically targeted early during alphabetical, breadth-first, or depth-first filesystem traversals. These decoy files mimic typical user files, such as `.docx`, `.xlsx`, `.pdf`, or `.db` documents, but remain registered exclusively with an underlying filesystem filter driver. Because these assets are never accessed by standard productivity applications or background operating system tasks, any read, write, or rename attempt on them indicates unauthorized access.
+
+Kernel mini-filter drivers capture IRP_MJ_CREATE requests targeting designated hidden decoy extensions before disk persistence completes. Once an unauthorized process opens a decoy handle with write or truncate access privileges, the driver halts thread execution. Mini-filter drivers operate high in the I/O manager stack, allowing the kernel to inspect caller identity, parent execution ancestry, and intended access masks before the filesystem processes the write operation.
+
+Simultaneously, the driver computes dynamic Shannon entropy over preliminary write blocks: entropy calculation exceeding 7.8 bits per byte across five written blocks serves as deterministic confirmation of dense ciphertext emission. Combining designated decoy path access with high-entropy stream detection eliminates false positives from legitimate utilities such as compression tools or media converters. While legitimate archive tools may generate high-entropy data, they do not access protected canary directories without prior user interaction.
+
+When an untrusted thread trips a registered canary file and subsequently streams high-entropy blocks into the write buffer, the filter driver suspends the calling thread immediately and triggers isolation routines to prevent damage to neighboring documents.
