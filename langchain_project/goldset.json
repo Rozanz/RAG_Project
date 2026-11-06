@@ -1,0 +1,79 @@
+{
+  "about": "Gold set for Pre-Encryption Ransomware Detection and Automated Mitigation KB. 6 answerable + 2 unanswerable.",
+  "kb_files": [
+    "01_hpc_telemetry.md",
+    "02_api_heuristics.md",
+    "03_decoy_traps.md",
+    "04_incident_mitigation.md"
+  ],
+  "questions": [
+    {
+      "qid": "Q1",
+      "question": "What microarchitectural cache anomaly occurs during key schedule derivation?",
+      "source": "01_hpc_telemetry.md",
+      "evidence": [
+        "L3 cache miss rate surges exceeding 45% during key schedule derivation"
+      ],
+      "answerable": true
+    },
+    {
+      "qid": "Q2",
+      "question": "Which directory traversal sequence serves as a prominent heuristic before encryption?",
+      "source": "02_api_heuristics.md",
+      "evidence": [
+        "sequential invocation of FindFirstFileW and FindNextFileW loops"
+      ],
+      "answerable": true
+    },
+    {
+      "qid": "Q3",
+      "question": "Which specific I/O request packet does a mini-filter driver intercept on canary files?",
+      "source": "03_decoy_traps.md",
+      "evidence": [
+        "IRP_MJ_CREATE requests targeting designated hidden decoy extensions"
+      ],
+      "answerable": true
+    },
+    {
+      "qid": "Q4",
+      "question": "What Shannon entropy measurement indicates ciphertext emission?",
+      "source": "03_decoy_traps.md",
+      "evidence": [
+        "entropy calculation exceeding 7.8 bits per byte across five written blocks"
+      ],
+      "answerable": true
+    },
+    {
+      "qid": "Q5",
+      "question": "What administrative command execution prompts immediate process termination?",
+      "source": "04_incident_mitigation.md",
+      "evidence": [
+        "vssadmin execution triggers immediate endpoint process termination"
+      ],
+      "answerable": true
+    },
+    {
+      "qid": "Q6",
+      "question": "What forensic preservation step is taken before terminating the malicious process?",
+      "source": "04_incident_mitigation.md",
+      "evidence": [
+        "volatile memory dump to an isolated out-of-band network share"
+      ],
+      "answerable": true
+    },
+    {
+      "qid": "Q7",
+      "question": "What is the capital city of Australia and what is its population?",
+      "source": null,
+      "evidence": [],
+      "answerable": false
+    },
+    {
+      "qid": "Q8",
+      "question": "What is the hardcoded master public key fingerprint embedded in the LockBit 3.0 binary builder?",
+      "source": null,
+      "evidence": [],
+      "answerable": false
+    }
+  ]
+}

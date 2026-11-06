@@ -1,0 +1,9 @@
+# Automated Incident Containment and Memory Preservation
+
+Once high-entropy file writes or decoy trips trigger high-confidence detection, response procedures must execute in kernel space within sub-second thresholds to safeguard unaffected data. Standard manual intervention cannot prevent data loss given modern ransomware encryption speeds. Therefore, defensive orchestration agents implement deterministic, pre-authorized containment policies to halt damage immediately.
+
+The foremost reactive rule dictates that vssadmin execution triggers immediate endpoint process termination to defend system restore points from deletion. Malicious campaigns routinely invoke vssadmin delete shadows or bcdedit tampering to disable backup recovery mechanisms before deploying encryption loops. Halting these parent execution trees immediately protects critical system snapshots. Simultaneously, the response daemon triggers NT suspend process primitives on the malicious parent process tree, immediately severing outbound TCP command-and-control beacons.
+
+Prior to issuing an immutable process termination call, the defensive agent executes volatile memory dump to an isolated out-of-band network share. This forensic snapshot preserves injected payloads, ephemeral AES key schedules, and runtime configuration strings residing purely in volatile RAM, ensuring clean offline extraction of decryption keys for incident recovery.
+
+Executing process termination without memory capture destroys the only copy of dynamic symmetric round keys stored in volatile memory, making automated recovery impossible if files were already encrypted. Capturing volatile memory preserves ephemeral session keys, configuration blocks, and decrypted payload artifacts, which incident responders can analyze later to reconstruct master decryption keys.
