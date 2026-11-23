@@ -1,0 +1,77 @@
+{
+  "about": "Original, fictional security telemetry scenarios for Mini-Project 4. These are synthetic examples, not copied production logs.",
+  "alerts": [
+    {
+      "id": "A01",
+      "alert": "EDR flagged ransomware-like mass file renaming and rapid encryption on the finance shared drive outside business hours.",
+      "expected": "escalate",
+      "note": "Rapid encryption affecting a shared finance drive suggests active destructive activity and warrants immediate containment and investigation."
+    },
+    {
+      "id": "A02",
+      "alert": "Windows Event 4732 recorded an unapproved service account added to the local Administrators group on the payroll server.",
+      "expected": "escalate",
+      "note": "An unapproved privileged group membership change on a sensitive server is a strong sign of possible unauthorized privilege escalation."
+    },
+    {
+      "id": "A03",
+      "alert": "Cloud audit logs show a storage bucket holding employee records was changed from private access to public read access by an unfamiliar identity.",
+      "expected": "escalate",
+      "note": "Unexpected public access to employee records creates an immediate data exposure risk and needs verification and remediation."
+    },
+    {
+      "id": "A04",
+      "alert": "Network monitoring detected sustained outbound transfers from a database server to an unrecognized external address at 02:15.",
+      "expected": "escalate",
+      "note": "Unusual large outbound activity from a database server could indicate data theft, so an analyst should examine destination and flow records."
+    },
+    {
+      "id": "A05",
+      "alert": "EDR observed powershell.exe launching with an encoded command and then disabling endpoint protection on a staff laptop.",
+      "expected": "escalate",
+      "note": "Encoded scripting followed by disabling security controls is suspicious behavior that requires prompt investigation even without a lecture keyword."
+    },
+    {
+      "id": "A06",
+      "alert": "Identity monitoring logged repeated MFA approvals denied by an employee followed by a successful sign-in from a new country.",
+      "expected": "escalate",
+      "note": "Repeated denied MFA requests followed by an unfamiliar successful login may indicate account compromise or MFA fatigue."
+    },
+    {
+      "id": "A07",
+      "alert": "Patch system reported a critical security update successfully installed on a lab VM during its approved maintenance window.",
+      "expected": "close",
+      "note": "The high-severity word describes the patch being installed, while the approved window and lab asset support routine closure after validation."
+    },
+    {
+      "id": "A08",
+      "alert": "Windows Event 4625 recorded one failed password entry from an employee workstation followed by a successful login from the same device.",
+      "expected": "close",
+      "note": "A single failure followed by normal access from the same managed device is consistent with a mistyped password, absent other warning signs."
+    },
+    {
+      "id": "A09",
+      "alert": "IDS logged a port scan from the approved vulnerability scanner against the isolated test subnet during the scheduled assessment.",
+      "expected": "close",
+      "note": "The source, target, and timing match an authorized internal scanning exercise, so the activity is expected."
+    },
+    {
+      "id": "A10",
+      "alert": "Backup monitoring recorded the nightly archive job copying files from the application server to the registered backup destination.",
+      "expected": "close",
+      "note": "The transfer matches a scheduled backup job and an approved destination, with no unusual behavior indicated."
+    },
+    {
+      "id": "A11",
+      "alert": "EDR generated a ransomware detection for a harmless test file on the security team's isolated training endpoint.",
+      "expected": "close",
+      "note": "The security team intentionally triggered the detection in an isolated training environment and verified the test activity."
+    },
+    {
+      "id": "A12",
+      "alert": "Cloud audit logs show an administrator rotating a service key under an approved change ticket during the weekly maintenance window.",
+      "expected": "close",
+      "note": "The privileged action is expected because the change ticket, actor, and maintenance window match the approved key-rotation procedure."
+    }
+  ]
+}

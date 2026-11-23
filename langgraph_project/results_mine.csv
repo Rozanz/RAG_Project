@@ -1,0 +1,6 @@
+configuration,caught,missed,over_escalated,correctly_closed,missed_ids,over_ids
+narrow (2 words),1,5,1,5,"A02,A03,A04,A05,A06",A11
+lecture (5 words),2,4,3,3,"A03,A04,A05,A06","A07,A11,A12"
+wider (8 words),4,2,3,3,"A03,A05","A07,A11,A12"
+widest (11 words),4,2,5,1,"A03,A05","A07,A08,A09,A11,A12"
+enhanced graph (8 words + context),6,0,1,5,,A11
